@@ -48,7 +48,7 @@
 	<button
 		class="flex space-x-1"
 		on:click={() => {
-			goto('/workspace/knowledge');
+			goto(WEBUI_BASE_URL + '/workspace/knowledge');
 		}}
 	>
 		<div class=" self-center">

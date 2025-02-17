@@ -39,7 +39,7 @@
 			$socket.emit('user-join', { auth: { token: sessionUser.token } });
 			await user.set(sessionUser);
 			await config.set(await getBackendConfig());
-			goto('/');
+			goto(WEBUI_BASE_URL + '/');
 		}
 	};
 
@@ -109,7 +109,7 @@
 
 	onMount(async () => {
 		if ($user !== undefined) {
-			await goto('/');
+			await goto(WEBUI_BASE_URL + '/');
 		}
 		await checkOauthCallback();
 

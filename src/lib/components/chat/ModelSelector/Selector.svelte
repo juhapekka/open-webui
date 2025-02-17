@@ -338,7 +338,7 @@
 												placement="top-start"
 											>
 												<img
-													src={item.model?.info?.meta?.profile_image_url ?? '/static/favicon.png'}
+													src={item.model?.info?.meta?.profile_image_url ?? 'static/favicon.png'}
 													alt="Model"
 													class="rounded-full size-5 flex items-center mr-2"
 												/>
@@ -582,7 +582,7 @@
 						class="flex justify-between w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 px-3 text-sm text-gray-700 dark:text-gray-100 outline-none transition-all duration-75 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg cursor-pointer data-[highlighted]:bg-muted"
 						on:click={async () => {
 							temporaryChatEnabled.set(!$temporaryChatEnabled);
-							await goto('/');
+							await goto(WEBUI_BASE_URL + '/');
 							const newChatButton = document.getElementById('new-chat-button');
 							setTimeout(() => {
 								newChatButton?.click();

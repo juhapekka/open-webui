@@ -9,7 +9,7 @@
 
 	onMount(async () => {
 		if ($config) {
-			await goto('/');
+			await goto(WEBUI_BASE_URL + '/');
 		}
 
 		loaded = true;
